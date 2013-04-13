@@ -1,7 +1,7 @@
 ## no critic (RequireUseStrict, RequireUseWarnings)
 package MooX::StrictConstructor;
 {
-  $MooX::StrictConstructor::VERSION = '0.001';
+  $MooX::StrictConstructor::VERSION = '0.002';
 }
 ## critic;
 
@@ -39,7 +39,7 @@ MooX::StrictConstructor - Make your Moo-based object constructors blow up on unk
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -124,7 +124,9 @@ George Hartzell <hartzell@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by George Hartzell.  No
-license is granted to other entities.
+This software is copyright (c) 2013 by George Hartzell.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut

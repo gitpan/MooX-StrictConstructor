@@ -6,7 +6,7 @@
    "dynamic_config" : 0,
    "generated_by" : "Dist::Zilla version 4.300031, CPAN::Meta::Converter version 2.120921",
    "license" : [
-      "restricted"
+      "perl_5"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -69,11 +69,11 @@
    "provides" : {
       "Method::Generate::Constructor::Role::StrictConstructor" : {
          "file" : "lib/Method/Generate/Constructor/Role/StrictConstructor.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "MooX::StrictConstructor" : {
          "file" : "lib/MooX/StrictConstructor.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       }
    },
    "release_status" : "stable",
@@ -88,6 +88,6 @@
          "web" : "https://github.com/hartzell/moox-strictconstructor"
       }
    },
-   "version" : "0.001"
+   "version" : "0.002"
 }
 
