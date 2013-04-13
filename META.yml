@@ -1,0 +1,50 @@
+---
+abstract: 'Make your Moo-based object constructors blow up on unknown attributes.'
+author:
+  - 'George Hartzell <hartzell@cpan.org>'
+build_requires:
+  File::Find: 0
+  File::Temp: 0
+  Module::Build: 0.3601
+  Test::Fatal: 0
+  Test::More: 0.88
+  bareword::filehandles: 0
+  indirect: 0
+  multidimensional: 0
+  strict: 0
+  warnings: 0
+configure_requires:
+  Module::Build: 0.3601
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300031, CPAN::Meta::Converter version 2.120921'
+license: restrictive
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: MooX-StrictConstructor
+no_index:
+  directory:
+    - t
+    - xt
+    - examples
+    - corpus
+  package:
+    - DB
+provides:
+  Method::Generate::Constructor::Role::StrictConstructor:
+    file: lib/Method/Generate/Constructor/Role/StrictConstructor.pm
+    version: 0.001
+  MooX::StrictConstructor:
+    file: lib/MooX/StrictConstructor.pm
+    version: 0.001
+requires:
+  B: 0
+  Moo: 0
+  Moo::Role: 0
+  perl: 5.006
+  strictures: 1
+resources:
+  bugtracker: https://github.com/hartzell/moox-strictconstructor/issues
+  homepage: https://metacpan.org/release/MooX-StrictConstructor
+  repository: git://github.com/hartzell/moox-strictconstructor.git
+version: 0.001
