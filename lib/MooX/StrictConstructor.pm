@@ -1,7 +1,7 @@
 ## no critic (RequireUseStrict, RequireUseWarnings)
 package MooX::StrictConstructor;
 {
-  $MooX::StrictConstructor::VERSION = '0.002';
+  $MooX::StrictConstructor::VERSION = '0.003';
 }
 ## critic;
 
@@ -39,7 +39,7 @@ MooX::StrictConstructor - Make your Moo-based object constructors blow up on unk
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -91,18 +91,21 @@ code runs before the object is constructed the C<BUILD> trick will not work.
 
 =over 4
 
+=item Inheritance
 
+A class that uses L<MooX::StrictConstructor> but extends another class that
+does not will not be handled properly.  This code hooks into the constructor
+as it is being strung up (literally) and that happens in the parent class,
+not the one using strict.
+
+=item Subverting strictness
+
+L<MooseX::StrictConstructor> documents a trick
+for subverting strictness using BUILD.  This does not work here because
+strictness is enforced in the early stage of object construction but the
+BUILD subs are run after the objects has been built.
 
 =back
-
-* A class that uses L<MooX::StrictConstructor> but extends another class that
-  does not will not be handled properly.  This code hooks into the constructor
-  as it is being strung up (literally) and that happens in the parent class,
-  not the one using strict.
-* L<MooseX::StrictConstructor> documents a trick for subverting strictness
-  using BUILD.  This does not work here because strictness is enforced in the
-  early stage of object construction but the BUILD subs are run after the
-  objects has been built.
 
 =head1 SEE ALSO
 
