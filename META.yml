@@ -33,13 +33,13 @@ no_index:
 provides:
   Method::Generate::Constructor::Role::StrictConstructor:
     file: lib/Method/Generate/Constructor/Role/StrictConstructor.pm
-    version: 0.003
+    version: 0.004
   MooX::StrictConstructor:
     file: lib/MooX/StrictConstructor.pm
-    version: 0.003
+    version: 0.004
 requires:
   B: 0
-  Moo: 0
+  Moo: 1.001000
   Moo::Role: 0
   perl: 5.006
   strictures: 1
@@ -47,4 +47,4 @@ resources:
   bugtracker: https://github.com/hartzell/moox-strictconstructor/issues
   homepage: https://metacpan.org/release/MooX-StrictConstructor
   repository: git://github.com/hartzell/moox-strictconstructor.git
-version: 0.003
+version: 0.004

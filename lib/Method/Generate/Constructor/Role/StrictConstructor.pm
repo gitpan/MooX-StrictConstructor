@@ -1,7 +1,7 @@
 ## no critic (RequireUseStrict, RequireUseWarnings)
 package Method::Generate::Constructor::Role::StrictConstructor;
 {
-  $Method::Generate::Constructor::Role::StrictConstructor::VERSION = '0.003';
+  $Method::Generate::Constructor::Role::StrictConstructor::VERSION = '0.004';
 }
 ## critic;
 
@@ -51,7 +51,7 @@ Method::Generate::Constructor::Role::StrictConstructor - a role to make Moo cons
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 DESCRIPTION
 

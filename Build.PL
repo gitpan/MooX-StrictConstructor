@@ -17,14 +17,14 @@ my %module_build_args = (
     "George Hartzell <hartzell\@cpan.org>"
   ],
   "dist_name" => "MooX-StrictConstructor",
-  "dist_version" => "0.003",
+  "dist_version" => "0.004",
   "license" => "perl",
   "module_name" => "MooX::StrictConstructor",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
     "B" => 0,
-    "Moo" => 0,
+    "Moo" => "1.001000",
     "Moo::Role" => 0,
     "perl" => "5.006",
     "strictures" => 1

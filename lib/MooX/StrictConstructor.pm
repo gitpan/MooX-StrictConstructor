@@ -1,7 +1,7 @@
 ## no critic (RequireUseStrict, RequireUseWarnings)
 package MooX::StrictConstructor;
 {
-  $MooX::StrictConstructor::VERSION = '0.003';
+  $MooX::StrictConstructor::VERSION = '0.004';
 }
 ## critic;
 
@@ -10,7 +10,7 @@ package MooX::StrictConstructor;
 
 use strictures 1;
 
-use Moo       ();
+use Moo 1.001000 ();    # $Moo::MAKERS support
 use Moo::Role ();
 
 sub import {
@@ -39,7 +39,7 @@ MooX::StrictConstructor - Make your Moo-based object constructors blow up on unk
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 
