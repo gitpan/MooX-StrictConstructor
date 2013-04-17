@@ -1,9 +1,4 @@
-## no critic (RequireUseStrict, RequireUseWarnings)
 package MooX::StrictConstructor;
-{
-  $MooX::StrictConstructor::VERSION = '0.004';
-}
-## critic;
 
 # ABSTRACT: Make your Moo-based object constructors blow up on unknown attributes.
 
@@ -12,7 +7,15 @@ use strictures 1;
 
 use Moo 1.001000 ();    # $Moo::MAKERS support
 use Moo::Role ();
+{
+  $MooX::StrictConstructor::VERSION = '0.005';
+}
 
+#
+# The gist of this code was copied directly from Graham Knop (HAARG)'s
+# MooX::InsideOut, specifically its import sub.  It has diverged a bit to
+# handle goal specific differences.
+#
 sub import {
     my $class  = shift;
     my $target = caller;
@@ -39,7 +42,7 @@ MooX::StrictConstructor - Make your Moo-based object constructors blow up on unk
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 SYNOPSIS
 

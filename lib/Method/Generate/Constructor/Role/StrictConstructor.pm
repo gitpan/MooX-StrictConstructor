@@ -1,16 +1,21 @@
-## no critic (RequireUseStrict, RequireUseWarnings)
 package Method::Generate::Constructor::Role::StrictConstructor;
-{
-  $Method::Generate::Constructor::Role::StrictConstructor::VERSION = '0.004';
-}
-## critic;
 
 # ABSTRACT: a role to make Moo constructors strict.
 
 
 use Moo::Role;
 use B ();
+{
+  $Method::Generate::Constructor::Role::StrictConstructor::VERSION = '0.005';
+}
 
+#
+# The gist of this code was copied directly from Dave Rolsky's (DROLSKY)
+# MooseX::StrictConstructor, specifically from
+# MooseX::StrictConstructor::Trait::Method::Constructor as a modifier around
+# _generate_BUILDALL.  It has diverged only slightly to handle Moo-specific
+# differences.
+#
 around _assign_new => sub {
     my $orig = shift;
     my $self = shift;
@@ -51,7 +56,7 @@ Method::Generate::Constructor::Role::StrictConstructor - a role to make Moo cons
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 DESCRIPTION
 

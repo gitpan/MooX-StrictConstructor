@@ -8,6 +8,7 @@ README
 dist.ini
 lib/Method/Generate/Constructor/Role/StrictConstructor.pm
 lib/MooX/StrictConstructor.pm
+perlcritic.rc
 t/00-compile.t
 t/basic.t
 xt/author/critic.t

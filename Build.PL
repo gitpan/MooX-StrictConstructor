@@ -17,7 +17,7 @@ my %module_build_args = (
     "George Hartzell <hartzell\@cpan.org>"
   ],
   "dist_name" => "MooX-StrictConstructor",
-  "dist_version" => "0.004",
+  "dist_version" => "0.005",
   "license" => "perl",
   "module_name" => "MooX::StrictConstructor",
   "recommends" => {},
