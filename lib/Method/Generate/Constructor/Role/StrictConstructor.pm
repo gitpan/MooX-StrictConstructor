@@ -6,7 +6,7 @@ package Method::Generate::Constructor::Role::StrictConstructor;
 use Moo::Role;
 use B ();
 {
-  $Method::Generate::Constructor::Role::StrictConstructor::VERSION = '0.005';
+  $Method::Generate::Constructor::Role::StrictConstructor::VERSION = '0.006';
 }
 
 #
@@ -56,7 +56,7 @@ Method::Generate::Constructor::Role::StrictConstructor - a role to make Moo cons
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 DESCRIPTION
 

@@ -7,8 +7,12 @@ use strictures 1;
 
 use Moo 1.001000 ();    # $Moo::MAKERS support
 use Moo::Role ();
+use Class::Method::Modifiers qw(install_modifier);
+
+use constant
+    CON_ROLE => 'Method::Generate::Constructor::Role::StrictConstructor';
 {
-  $MooX::StrictConstructor::VERSION = '0.005';
+  $MooX::StrictConstructor::VERSION = '0.006';
 }
 
 #
@@ -23,10 +27,18 @@ sub import {
         die "MooX::StrictConstructor can only be used on Moo classes.";
     }
 
-    Moo::Role->apply_roles_to_object(
-        Moo->_constructor_maker_for($target),
-        'Method::Generate::Constructor::Role::StrictConstructor',
-    );
+    _apply_role($target);
+
+    install_modifier($target, 'after', 'extends', sub {
+        _apply_role($target);
+    });
+}
+
+sub _apply_role {
+    my $target = shift;
+    my $con = Moo->_constructor_maker_for($target);
+    Moo::Role->apply_roles_to_object($con, CON_ROLE)
+        unless Role::Tiny::does_role($con, CON_ROLE);
 }
 
 
@@ -42,7 +54,7 @@ MooX::StrictConstructor - Make your Moo-based object constructors blow up on unk
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 SYNOPSIS
 

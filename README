@@ -3,7 +3,7 @@ NAME
     up on unknown attributes.
 
 VERSION
-    version 0.005
+    version 0.006
 
 SYNOPSIS
         package My::Class;

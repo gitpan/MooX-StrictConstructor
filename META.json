@@ -46,8 +46,10 @@
       "runtime" : {
          "requires" : {
             "B" : "0",
+            "Class::Method::Modifiers" : "0",
             "Moo" : "1.001000",
             "Moo::Role" : "0",
+            "constant" : "0",
             "perl" : "5.006",
             "strictures" : "1"
          }
@@ -69,11 +71,11 @@
    "provides" : {
       "Method::Generate::Constructor::Role::StrictConstructor" : {
          "file" : "lib/Method/Generate/Constructor/Role/StrictConstructor.pm",
-         "version" : "0.005"
+         "version" : "0.006"
       },
       "MooX::StrictConstructor" : {
          "file" : "lib/MooX/StrictConstructor.pm",
-         "version" : "0.005"
+         "version" : "0.006"
       }
    },
    "release_status" : "stable",
@@ -88,6 +90,6 @@
          "web" : "https://github.com/hartzell/moox-strictconstructor"
       }
    },
-   "version" : "0.005"
+   "version" : "0.006"
 }
 
